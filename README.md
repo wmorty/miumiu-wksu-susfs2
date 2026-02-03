@@ -31,4 +31,5 @@ by flashing this kernel **you** are choosing to make sum mods, not me
 - **Wild Kernels**: Developed by [TheWildJames](https://github.com/TheWildJames).
 
 special thanks to the opensource community for their contributions<3
+
 luv u all
