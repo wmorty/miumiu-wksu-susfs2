@@ -1,10 +1,10 @@
 name: miumiu
 permissions:
-  contents: write # Allow writing to repository contents (for pushing tags)
-  actions: write # Allows triggering actions
+  contents: write 
+  actions: write 
 
 on:
-  workflow_call: # This allows this workflow to be called from another workflow
+  workflow_call: 
     inputs:
       codename:
         required: true
@@ -217,9 +217,9 @@ jobs:
           DEFCONFIG=./arch/arm64/configs/${{ inputs.codename }}_defconfig
 
           if grep -q '^CONFIG_LOCALVERSION=' "$DEFCONFIG"; then
-            sed -i 's/^CONFIG_LOCALVERSION=.*/CONFIG_LOCALVERSION="-miumiu-@cryptsn0w"/' "$DEFCONFIG"
+            sed -i 's/^CONFIG_LOCALVERSION=.*/CONFIG_LOCALVERSION="-miumiu"/' "$DEFCONFIG"
           else
-            echo 'CONFIG_LOCALVERSION="-miumiu-@cryptsn0w"' >> "$DEFCONFIG"
+            echo 'CONFIG_LOCALVERSION="-miumiu"' >> "$DEFCONFIG"
           fi
 
           if grep -q '^CONFIG_LOCALVERSION_AUTO=' "$DEFCONFIG"; then
